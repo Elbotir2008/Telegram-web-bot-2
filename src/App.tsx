@@ -5,6 +5,11 @@ import { getData } from "./constants/db";
 
 const courses = getData();
 
+declare global {
+  interface Window {
+    Telegram: any;
+  }
+}
 const telegram = window.Telegram.WebApp;
 
 const App = () => {
